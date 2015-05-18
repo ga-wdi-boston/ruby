@@ -77,7 +77,7 @@ In Ruby, everything is an expression.  And many things you "do" are method calls
 
 ### Brief aside: syntactic sugar
 
-We've already seen one example.  `counter += 1` is really just Ruby making you type fewer characters to accomplish `counter = counter + 1` (just like JavaScript).  But there's more.
+We've already seen one example.  `counter += 1` is really just Ruby making you type fewer characters to accomplish `counter = counter + 1` (just like JavaScript).  But there's more.  Ruby provides sugar for all of the operators defined as methods.
 
 ```ruby
 [1] pry(main)> counter ||= 0
@@ -199,16 +199,36 @@ Strings objects come with several conversion methods that all start `to_` and th
 
 Inside a pair of double quotes, Ruby will replace `#{<ruby expression>}` with the value of that expression
 
+So instead of:
+
 ```ruby
 [1] pry(main)> name = "Antony"
 => "Antony"
 [2] pry(main)> age = 35
 => 35
-[3] pry(main)> "#{name} is #{age} years old"
+[3] pry(main)> name + " is " + age.to_s + " year old."
+=> "Antony is 35 year old."
+[4] pry(main)>
+```
+
+We can use:
+
+```ruby
+[1] pry(main)> name = "Antony"
+=> "Antony"
+[2] pry(main)> age = 35
+=> 35
+[4] pry(main)> "#{name} is #{age} years old"
 => "Antony is 35 years old"
-[4] pry(main)> "ten + seven == #{10 + 7}"
-=> "ten + seven == 17"
 [5] pry(main)>
+```
+
+And this also works:
+
+```ruby
+[5] pry(main)> "ten + seven == #{10 + 7}"
+=> "ten + seven == 17"
+[6] pry(main)>
 ```
 
 ## Numbers
