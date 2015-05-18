@@ -103,7 +103,9 @@ In Pry, try out the operators we've used in JavaScript on numbers and numeric va
 
 ### Differences and possible gotchas learning Ruby after JavaScript
 
-- In Ruby, use `==` to test for equality, it produces the most predictable result. <!-- === (case, when) -->
+<!-- === (case, when) -->
+
+- In Ruby, use `==` to test for equality, it produces the most predictable result.
 
 - Use `.equal?` if we *need* to test for identity (two variables that reference the same object).
 
