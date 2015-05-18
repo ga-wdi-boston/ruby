@@ -144,7 +144,7 @@ from (pry):3:in `+'
 
 ## Methods
 
-`def is_max? name; name == "Max"; end` creates a method that tests if its argument is Max.  The question mark is conventional for predicates.  We'll also see a trailing exclamation point, which is a convention for mutators (methods that change the object they are called on rather than returning a new object).
+`def max? name; name == "Max"; end` creates a method that tests if its argument is Max.  The question mark is conventional for predicates.  We'll also see a trailing exclamation point, which is a convention for mutators (methods that change the object they are called on rather than returning a new object).
 
 The value of a method invocation is the last expression evaluated (which may be a return expression).
 
@@ -155,7 +155,7 @@ All methods are defined on an object, contra JavaScript.
 A Ruby `if` looks much like we'd expect, but note that we use `elsif` not `else if`, and that the boolean expression often don't require parentheses
 
 ```ruby
-if is_max? name then
+if max? name then
   "It's Max"
 elsif name == "Matt" then
   "Matt"
@@ -167,7 +167,7 @@ end
 `unless` is often used to replace an `if` with a negated test and no `elsif` or `else`.
 
 ```ruby
-if !is_max? name then
+if !max? name then
   puts "Not Max!"
 end
 ```
@@ -175,7 +175,7 @@ end
 Versus
 
 ```ruby
-unless is_max? name then
+unless max? name then
   puts "Not Max!"
 end
 ```
@@ -183,7 +183,7 @@ end
 A `while` loop executes
 
 ```ruby
-while is_max? name do
+while max? name do
   $stdout.puts "Enter 'Max' to continue"
   name = $stdin.gets.chomp
 end
