@@ -332,7 +332,7 @@ A Ruby hash acts somewhat like a dictionary in JavaScript, in that it consists o
 However, there are a couple of important differences. For instance, Ruby hashes do not allow you to access their keys through a dot notation; you _must_ use square braces.
 
 #### Your Turn
-In pairs, edit your fizzbuzz code, adding a hash containing keys "fizz", "buzz", "fizzbuzz", and "other", each with arrays as values. As you iterate through all the numbers from 1 to `max_num`, add each number to one of the arrays mentioned above; numbers divisible by 3 _only_ should go into the `"fizz"` array, numbers divisible by 5 _only_ should go into the ``"buzz"`` array, numbers divisible by both should go into the `"fizzbuzz"` array, and numbers divisible by neither should go into the `"other"` array. Finally, once you're done, return the hash as the result of `fizzbuzz`.
+In pairs, edit your fizzbuzz code, adding a hash containing keys `"fizz"`, `"buzz"`, `"fizzbuzz"`, and `"other"`, each with arrays as values. As you iterate through all the numbers from 1 to `max_num`, add each number to one of the arrays mentioned above; numbers divisible by 3 _only_ should go into the `"fizz"` array, numbers divisible by 5 _only_ should go into the ``"buzz"`` array, numbers divisible by both should go into the `"fizzbuzz"` array, and numbers divisible by neither should go into the `"other"` array. Finally, once you're done, return the hash as the result of `fizzbuzz`.
 
 Run your code from the console using `ruby`, and check your work using `pry`.
 
