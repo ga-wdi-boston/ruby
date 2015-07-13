@@ -284,7 +284,7 @@ The question mark is conventional for methods that return a boolean.  Another co
 
 > This behavior is also sometimes referred to as operating 'in place'.
 
-Ruby methods use an _implicit return_ - by default, they will return the value last expression evaluated (which may or may not be a return expression). However, Ruby does also have a `return` keyword which, as it does in JavaScript, immediately terminates the function/method and sends back a value. In the case of the method above, `square?` will return the value of that last expression, `Math.sqrt(num)**2 == num`.
+Ruby methods use an _implicit return_ - by default, they will return the value last expression evaluated (which may or may not be a return expression). However, Ruby does also have a `return` keyword which, as it does in JavaScript, immediately terminates the function/method and sends back a value. In the case of the method above, `square?` will return the value of that last expression, `Math.sqrt(num).to_i**2 == num`.
 
 #### Your Turn
 
