@@ -276,7 +276,7 @@ To define a method, you use the following syntax:
 
 ```ruby
 def square? (num)
-  Math.sqrt(num)**2 == num
+  Math.sqrt(num).to_i**2 == num
 end
 ```
 
