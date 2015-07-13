@@ -28,7 +28,7 @@ By the end of this lesson, students should be able to:
 
 ## Foreword
 
-The depth and breadth of the [Ruby Core]((http://ruby-doc.org/core-2.2.0/) and [Standard Library](http://ruby-doc.org/stdlib-2.2.0/) are so extensive that we'll always want to check them before building something ourselves.  The official Ruby docs are our friends, and we should use them liberally.  Over time, we'll learn to remember the more common methods, but even then it can be extremely useful to consult the documentation.
+The depth and breadth of the [Ruby Core](http://ruby-doc.org/core-2.2.0/) and [Standard Library](http://ruby-doc.org/stdlib-2.2.0/) are so extensive that we'll always want to check them before building something ourselves.  The official Ruby docs are our friends, and we should use them liberally.  Over time, we'll learn to remember the more common methods, but even then it can be extremely useful to consult the documentation.
 
 ## Pry
 
@@ -118,7 +118,7 @@ Ruby doesn't have an increment operator, either pre (`++i`) or post (i++).  Use 
 
 #### Your Turn
 
-In pairs, open up `pry` and take five minutes trying out the operators we've used in JavaScript on numbers and numeric variables.  Use the method form and the assignment form with variables.  Does anything surprising happen?  Confusing?  Write those things down to share with the class.  Have a look in `operator_examples.rb` if you need some prompts.
+In pairs, open up `pry` and take five minutes trying out the operators we've used in JavaScript on numbers and numeric variables. Does anything surprising or confusing happen? Write those things down to share with the class.  Have a look in `operator_examples.rb` if you need some prompts.
 
 ## Ruby vs JS :: Strings
 
@@ -130,7 +130,7 @@ Strings objects come with several conversion methods that all start `to_` and th
 
 Ruby, unlike JavaScript, attributes different meanings to single-quoted and double-quoted strings. Single-quoted strings are referred to as _'string literals'_; they interpret their contents as a literal sequence of characters, with only two recognized escape sequences - `\'` and `\\`. Double-quoted strings, in contrast, support a much wider variety of escape characters, including `\n` (new line), `\t` (tab), and `\s` (space); if `\n` appeared in a single-quoted string, it would be interpreted as the character `\` followed by the character `\n`, rather than a new line.
 
-One neat thing that comes out of this is the ability to do _string interpolation_, inserting variables directly into the middle of a string. In JavaScript, if we had a variable `name` with value '"Harry"' and wanted to print out `"Hello, Tom!"`, we would need to write
+One neat thing that comes out of this is the ability to do _string interpolation_, inserting variables directly into the middle of a string. In JavaScript, if we had a variable `name` with value '"Harry"' and wanted to print out `"Hello, Harry!"`, we would need to write
 
 ```javascript
 console.log("Hello, " + name + "!");
