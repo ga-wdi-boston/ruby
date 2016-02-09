@@ -55,7 +55,7 @@ comparisons to make between Ruby and Javascript. These include:
 -   Fixnums, Floats, and Numbers.
 -   Falsiness.
 -   Flow control.
--   Loops and enumerable iteration.
+-   Loops, ranges, and enumerable iteration.
 -   Implicit and explicit returns.
 -   Expression evaluation and conditional assignment.
 -   Type coercion.
