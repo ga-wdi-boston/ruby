@@ -33,3 +33,18 @@ build/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+.env
+.envrc
+.DS_Store
+# Emacs temp files
+*~
+*#*
+
+# Ctags
+TAGS
+tags
+
+# VI temp files
+*.swp
+*.swo
+*.log
