@@ -22,26 +22,40 @@ you would the [HyperPolyglot](http://hyperpolyglot.org/scripting) reference: not
 as reading material, but as a handy place to compare and contrast the two
 most popular languages for web development.
 
-## Objectives
-
-By the end of this lesson, students should be able to:
-
 ## Prerequisites
 
-- A working knowledge of JavaScript and **[REPLs](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)**
-- **[Learn Ruby the Hard Way](http://learnrubythehardway.org/book/)** (recommended pre-reading)
+-   [ga-wdi-boston/js-basics](https://github.com/ga-wdi-boston/js-basics)
+-   [ga-wdi-boston/js-reference-types](https://github.com/ga-wdi-boston/js-reference-types)
+
+## Objectives
+
+By the end of this, students should be able to:
+
+-   Contrast Ruby REPL and interpreter with Node interpreter/REPL.
+-   Contrast basic language features and types from Ruby with basic language
+    features and types from JavaScript.
+-   Rewrite a JavaScript script in Ruby.
+
+## Preparation
+
+1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+    this repository.
+1.  Install dependencies with `bundle install`.
 
 ## Foreword
 
-The depth and breadth of the [Ruby Core](http://ruby-doc.org/core-2.2.0/) and [Standard Library](http://ruby-doc.org/stdlib-2.2.0/) are so extensive that we'll always want to check them before building something ourselves.  The official Ruby docs are our friends, and we should use them liberally.  Over time, we'll learn to remember the more common methods, but even then it can be extremely useful to consult the documentation.
+The depth and breadth of the [Ruby Core](http://ruby-doc.org/core-2.2.0/) and
+[Standard Library](http://ruby-doc.org/stdlib-2.2.0/) are so extensive that
+we'll always want to check them before building something ourselves.  The
+official Ruby docs are our friends, and we should use them liberally.  Over
+time, we'll learn to remember the more common methods, but even then it can be
+extremely useful to consult the documentation.
 
 ## Pry
 
-Fork and clone this repository. Then, `cd` into the repo, open the whole repo in sublime (`subl .`), and run the following console commands:
-
-```bash
-$ gem install pry
-$ pry
+```sh
+gem install pry
+pry
 ```
 
 **[Pry](http://pryrepl.org/)** is a console-based **[REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)** for working with Ruby. Simply type in an expression into Pry, and it returns the result (preceded by `=> `, also known as a 'hash rocket').
