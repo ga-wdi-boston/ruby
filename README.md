@@ -363,3 +363,8 @@ Run your code from the console using `ruby`, and check your work using `pry`.
 - **[Links to a variety of offical language and api documentation](https://www.ruby-lang.org/en/documentation/)**
 - **[rubymonk](https://rubymonk.com/)**
 - **[why's (poignant) Guide to Ruby](http://mislav.uniqpath.com/poignant-guide/)**
+
+## [License](LICENSE)
+
+Source code distributed under the MIT license. Text and other assets copyright
+General Assembly, Inc., all rights reserved.
