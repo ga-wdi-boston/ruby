@@ -42,6 +42,25 @@ By the end of this, students should be able to:
     this repository.
 1.  Install dependencies with `bundle install`.
 
+## Outline
+
+In order to accomplish our learning objectives, we've got quite a number of
+comparisons to make between Ruby and Javascript. These include:
+
+-   Running scripts from the command line.
+-   Evaluating code interactively in a REPL.
+-   Variable declaration and naming conventions.
+-   Strings, interpolation, and concatenation.
+-   Methods and functions, including predicates.
+-   Fixnums, Floats, and Numbers.
+-   Falsiness.
+-   Flow control.
+-   Loops and enumerable iteration.
+-   Implicit and explicit returns.
+-   Expression evaluation and conditional assignment.
+-   Type coercion.
+-   Logic, shortcut evaluation, and operator precedence.
+
 ## Foreword
 
 The depth and breadth of the [Ruby Core](http://ruby-doc.org/core-2.2.0/) and
