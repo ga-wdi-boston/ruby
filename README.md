@@ -2,24 +2,29 @@
 
 # Programming Fundamentals in Ruby (versus JavaScript)
 
+You've alredy learned the basics of programming with JavaScript, and you've
+begun to think like a problem-solver. You've had practice reading JS code and
+predicting execution by evaluating expressions in your mind.
+
+We'll continue to reinforce the basics of programming, but this time with Ruby.
+This may seem like a lot of material to cover in a short time, but the truth is
+our task is simpler than it was when we introduced JS. Instead of teaching you
+how to program, we'll focus on the *differences* between Ruby and JS with the
+goal of utilizing the foundation we've already built.
+
+"Polyglot" is a term used to refer to someone who can use two or more
+programming languages. By learning two languages, we increase your understanding
+of basic programming concepts, as well as give you an edge in job market.
+
+You will reference this material again and again over the next few weeks. Focus
+on noting the differences between Ruby and JS. You should use this material as
+you would the [HyperPolyglot](http://hyperpolyglot.org/scripting) reference: not
+as reading material, but as a handy place to compare and contrast the two
+most popular languages for web development.
+
 ## Objectives
 
 By the end of this lesson, students should be able to:
-
-- Open and use `pry`, a console-based Ruby REPL.
-- Compare and contast how the following core programming concepts are implemented in Ruby vs JavaScript
-    * variables and expressions
-    * strings
-    * flow control
-    * functions / methods
-    * collections
-- Run a custom Ruby program from the command line.
-- Rewrite a simple JavaScript program in Ruby.
-
-<!-- - Convert types using object methods
-- Use ruby string interpolation
-- Create and call methods
-- Control the flow of execution in a method -->
 
 ## Prerequisites
 
