@@ -85,9 +85,13 @@ pry
 [2] pry(main)>
 ```
 
-> In addition to allowing us to run code one line at a time, Pry can also be used (like the `node-debug` REPL we saw in Unit 1) to interactively debug our code. Though we won't be focusing on that aspect of Pry today, it'll be a critical tool throughout the rest of this unit.
+> In addition to allowing us to run code one line at a time, Pry can also be
+> used (like the `node-debug` REPL we saw in Unit 1) to interactively debug our
+> code. Though we won't be focusing on that aspect of Pry today, it'll be a
+> critical tool throughout the rest of this unit.
 
-Let's use `pry` to explore some of the core differences between Ruby and JavaScript.
+Let's use `pry` to explore some of the core differences between Ruby and
+JavaScript.
 
 ## Ruby vs JS :: Core Syntax, Variables, and Operators
 
@@ -122,14 +126,22 @@ from (pry):1:in '__pry__'
 [4] pry(main)>
 ```
 
-Ruby has its own set of scoping rules for variables, just like JavaScript does, and they work in (mostly) similar ways.
+Ruby has its own set of scoping rules for variables, just like JavaScript does,
+and they work in (mostly) similar ways.
 
 #### Operators
-In Ruby, everything is an expression - a statement composed of a combination of operands (data) and operations. In JavaScript, things like `+` and `-` are _true operators_ - keywords built into the language itself, and embued with fixed, unchangeable meanings. In Ruby, in contrast, most "operators" you encounter are actually method calls on some object; the main exceptions are assignment operators (e.g. `=`), logical operators (e.g. `||`, `&&`, `!`), and control flow operators (e.g. `and`, `or`, `not`).
+In Ruby, everything is an expression - a statement composed of a combination
+ of operands (data) and operations. In JavaScript, things like `+` and `-` are
+ _true operators_ - keywords built into the language itself, and embued with
+ fixed, unchangeable meanings. In Ruby, in contrast, most "operators" you
+ encounter are actually method calls on some object; the main exceptions
+ are assignment operators (e.g. `=`), logical operators
+ (e.g. `||`, `&&`, `!`), and control flow operators (e.g. `and`, `or`, `not`).
 
 ##### Brief Aside: Syntactic Sugar
 
-Ruby doesn't have an increment operator, either pre (`++i`) or post (i++).  Use `+=` instead.
+Ruby doesn't have an increment operator, either pre (`++i`) or post (`i++`).
+Use `+=` instead.
 
 ```ruby
 [4] pry(main)> counter += 1
@@ -141,7 +153,13 @@ Ruby doesn't have an increment operator, either pre (`++i`) or post (i++).  Use 
 [7] pry(main)>
 ```
 
-`counter += 1` is really just Ruby making you type fewer characters to accomplish `counter = counter + 1`. This is commonly referred to as 'syntactic sugar' - when a programming language has syntax that's deliberately designed to make code shorter/more semantic/easier to write. Ruby has a *ton* of syntactic sugar. JavaScript allows us to use this shorthand too; however, Ruby takes things a step further, providing this 'syntactic sugar' for a variety of operators, including `*`, `-`, and even `||`.
+`counter += 1` is really just Ruby making you type fewer characters to
+accomplish `counter = counter + 1`. This is commonly referred to as
+'syntactic sugar' - when a programming language has syntax that's deliberately
+designed to make code shorter/more semantic/easier to write. Ruby has a *ton*
+of syntactic sugar. JavaScript allows us to use this shorthand too; however,
+Ruby takes things a step further, providing this 'syntactic sugar' for a
+variety of operators, including `*`, `-`, and even `||`.
 
 ```ruby
 [1] pry(main)> counter ||= 0          # counter = counter || 0
@@ -156,19 +174,38 @@ Ruby doesn't have an increment operator, either pre (`++i`) or post (i++).  Use 
 
 #### Your Turn
 
-In pairs, open up `pry` and take five minutes trying out the operators we've used in JavaScript on numbers and numeric variables. Does anything surprising or confusing happen? Write those things down to share with the class.  Have a look in `operator_examples.rb` if you need some prompts.
+In pairs, open up `pry` and take five minutes trying out the operators we've
+used in JavaScript on numbers and numeric variables. Does anything surprising
+or confusing happen? Write those things down to share with the class.  Have a
+look in `operator_examples.rb` if you need some prompts.
 
 ## Ruby vs JS :: Strings
 
-Strings in Ruby are pretty similar to strings in JavaScript. To see all the methods that strings have in Ruby, open up `pry`, type a string followed by a '.', and hit tab; alternatively, you can call "some string".methods.sort for a full list. And, of course, the Ruby documentation has [a full list](http://ruby-doc.org/core-2.2.0/String.html) as well.
+Strings in Ruby are pretty similar to strings in JavaScript. To see all the
+methods that strings have in Ruby, open up `pry`, type a string followed by
+a '.', and hit tab; alternatively, you can call `"some string".methods.sort`
+for a full list. And, of course, the Ruby documentation has [a full list](http://ruby-doc.org/core-2.2.0/String.html) as well.
 
-Strings objects come with several conversion methods that all start `to_` and then a letter or abbreviation hinting at what conversion they perform.  `to_i` and `to_f` are used commonly - these convert the string into one of two types of numbers, **_integers_** (whole numbers) and **_floats_** (decimal numbers).
+Strings objects come with several conversion methods that all start `to_` and
+then a letter or abbreviation hinting at what conversion they perform.
+`to_i` and `to_f` are used commonly - these convert the string into one of two
+types of numbers, *_integers_* (whole numbers) and *_floats_* (decimal numbers).
 
 ### String interpolation
 
-Ruby, unlike JavaScript, attributes different meanings to single-quoted and double-quoted strings. Single-quoted strings are referred to as _'string literals'_; they interpret their contents as a literal sequence of characters, with only two recognized escape sequences - `\'` and `\\`. Double-quoted strings, in contrast, support a much wider variety of escape characters, including `\n` (new line), `\t` (tab), and `\s` (space); if `\n` appeared in a single-quoted string, it would be interpreted as the character `\` followed by the character `\n`, rather than a new line.
+Ruby, unlike JavaScript, attributes different meanings to single-quoted and
+double-quoted strings. Single-quoted strings are referred to as
+_'string literals'_; they interpret their contents as a literal sequence
+of characters, with only two recognized escape sequences - `\'` and `\\`.
+Double-quoted strings, in contrast, support a much wider variety of escape
+characters, including `\n` (new line), `\t` (tab), and `\s` (space); if `\n`
+appeared in a single-quoted string, it would be interpreted as the
+character `\` followed by the character `\n`, rather than a new line.
 
-One neat thing that comes out of this is the ability to do _string interpolation_, inserting variables directly into the middle of a string. In JavaScript, if we had a variable `name` with value '"Harry"' and wanted to print out `"Hello, Harry!"`, we would need to write
+One neat thing that comes out of this is the ability to do
+_string interpolation_, inserting variables directly into the middle of a
+string. In JavaScript, if we had a variable `name` with value '"Harry"' and
+wanted to print out `"Hello, Harry!"`, we would need to write
 
 ```javascript
 console.log("Hello, " + name + "!");
@@ -176,7 +213,8 @@ console.log("Hello, " + name + "!");
   "Hello, Harry!"
 ```
 
-That's not too bad, but if you start doing this with multiple variables, it can get a little hairy.
+That's not too bad, but if you start doing this with multiple variables, it
+can get a little hairy.
 
 ```JavaScript
 names = ["Harry", "Ron", "Hermione"]
@@ -185,7 +223,10 @@ console.log("Hello, " + names[0] + ", " + names[1] + ", and " + names[2] + "!");
   "Hello, Harry, Ron, and Hermione!"
 ```
 
-Keeping track of all of those quotes is a pain (not to mention the spaces), and if you forget a `+`, the expression won't work. And it gets even worse in Ruby, because Ruby doesn't implicitly convert numbers to strings, so all those conversions need to be done manually using `.to_s`.
+Keeping track of all of those quotes is a pain (not to mention the spaces), and
+if you forget a `+`, the expression won't work. And it gets even worse in Ruby,
+ because Ruby doesn't implicitly convert numbers to strings, so all those
+ conversions need to be done manually using `.to_s`.
 
 
 ```ruby
@@ -203,7 +244,10 @@ from (pry):3:in '+'
 => "Matt is 28 years old"
 ```
 
-Fortunately, Ruby does give us an alternative - at least with double-quoted strings. If the sequence `#{ ... }` appears inside a double-quoted string, Ruby will replace it with the value of the expression inside the curly braces, converted to a string.
+Fortunately, Ruby does give us an alternative - at least with double-quoted
+strings. If the sequence `#{ ... }` appears inside a double-quoted string,
+Ruby will replace it with the value of the expression inside the curly braces,
+converted to a string.
 
 So instead of:
 
@@ -236,7 +280,11 @@ This also works:
 
 #### Your Turn
 
-In your pairs, go to the Ruby documentation for strings (link above), and look up three of the methods available to Ruby strings. Open up `pry` and test them out on some sample strings. Try to incorporate string interpolation at least once. Once you're done, we'll reconvene as a class and discuss the methods we've explored.
+In your pairs, go to the Ruby documentation for strings (link above), and look
+up three of the methods available to Ruby strings. Open up `pry` and test them
+out on some sample strings. Try to incorporate string interpolation at least
+once. Once you're done, we'll reconvene as a class and discuss the methods
+we've explored.
 
 ## Ruby vs JS :: Flow Control
 
@@ -264,13 +312,19 @@ else
 end
 ```
 
-A Ruby `if` looks quite similar to a JavaScript `if`. Some of the major differences are:
+A Ruby `if` looks quite similar to a JavaScript `if`. Some of the major
+differences are:
 - In Ruby, we use `elsif`, not `else if`.
 - Conditions don't require parentheses (though they can still accept them).
-- No curly braces required. Simply break up your condition from your code with a newline (as above), a semicolon, or the keyword `then` (e.g. `if .... then `).
-- The end of the `if` is indicated by the keyword `end`. `end` is an extremely common keyword in Ruby, appearing at the end of pretty much any contiguous section of code.
+- No curly braces required. Simply break up your condition from your code
+- with a newline (as above), a semicolon, or the keyword `then`
+- (e.g. `if .... then `).
+- The end of the `if` is indicated by the keyword `end`. `end` is an extremely
+- common keyword in Ruby, appearing at the end of pretty much any contiguous
+- section of code.
 
-`unless` can sometimes be used to replace an `if` with a negated test and no `elsif` or `else`.
+`unless` can sometimes be used to replace an `if` with a negated test and no
+`elsif` or `else`.
 
 ```ruby
 if !(name == "Max")
@@ -287,7 +341,8 @@ end
 
 ### Loops
 
-Similarly to `if`, a `while` loop also looks almost the same in Ruby as it does in JavaScript.
+Similarly to `if`, a `while` loop also looks almost the same in Ruby as it does
+ in JavaScript.
 
 ```ruby
 while i < 10 do
@@ -295,20 +350,36 @@ while i < 10 do
 end
 ```
 
-The `do` keyword above is optional - a newline is sufficient - but `do ... end` is a common construction in Ruby because it specifies what's known as a **_block_**, a grouping of several lines of code. We'll learn more about blocks soon.
+The `do` keyword above is optional - a newline is sufficient - but `do ... end`
+ is a common construction in Ruby because it specifies what's known as a
+ **_block_**, a grouping of several lines of code. We'll learn more about
+ blocks soon.
 
 #### Your Turn
 
-This time, rather than using `pry`, we're going to write a longer program in Sublime, and then run it in the terminal using `ruby`, a command line Ruby environment.
-Open up the file `fizzbuzz.rb`, found in the root of this repo; in pairs, you're going to solve "FizzBuzz", a simple programming challenge based on a childrens' game. Essentially, your program should print out all of the numbers from 1 up to `max_num`, which is a variable to which you can assign an arbitrary (positive, integer) value. However, if a number is divisible by 3, instead of printing the number, your program should print the word "fizz"; for numbers divisible by 5, it should print "buzz"; for numbers divisible by both 3 **_and_** five, it should print "fizzbuzz".
+This time, rather than using `pry`, we're going to write a longer program in
+Atom, and then run it in the terminal using `ruby`, a command line Ruby
+environment. Open up the file `fizzbuzz.rb`, found in the root of this repo;
+in pairs, you're going to solve "FizzBuzz", a simple programming challenge
+based on a childrens' game. Essentially, your program should print out all of
+the numbers from 1 up to `max_num`, which is a variable to which you can assign
+ an arbitrary (positive, integer) value. However, if a number is divisible by
+ 3, instead of printing the number, your program should print the word "fizz";
+ for numbers divisible by 5, it should print "buzz"; for numbers divisible by
+ both 3 **_and_** five, it should print "fizzbuzz".
 
-To run your code, simply type navigate to the root of this repository and run `ruby fizzbuzz.rb`
+To run your code, simply type navigate to the root of this repository and run
+`ruby fizzbuzz.rb`
 
-> This should seem familiar, since it's exactly what we were doing with `node` in Unit 1. It's a deliberate similarity - Node was modeled off of other console-based runtime environments, as a way of giving JavaScript a solid platform for running on the server side.
+> This should seem familiar, since it's exactly what we were doing with `node`
+in Unit 1. It's a deliberate similarity - Node was modeled off of other
+console-based runtime environments, as a way of giving JavaScript a solid
+platform for running on the server side.
 
 ## Ruby vs JS :: Methods
 
-Ruby draws no distinction between functions that are properties of objects and functions that aren't; in Ruby, all of them are called 'methods'.
+Ruby draws no distinction between functions that are properties of objects and
+functions that aren't; in Ruby, all of them are called 'methods'.
 
 To define a method, you use the following syntax:
 
@@ -318,15 +389,24 @@ def square? (num)
 end
 ```
 
-The question mark is conventional for methods that return a boolean.  Another common convention in Ruby is a trailing exclamation point, which indicates that a method is a 'mutator' - this means that the method changes the object that it is called from, rather than returning a new object.
+The question mark is conventional for methods that return a boolean.  Another
+common convention in Ruby is a trailing exclamation point, which indicates that
+ a method is a 'mutator' - this means that the method changes the object that
+ it is called from, rather than returning a new object.
 
 > This behavior is also sometimes referred to as operating 'in place'.
 
-Ruby methods use an _implicit return_ - by default, they will return the value last expression evaluated (which may or may not be a return expression). However, Ruby does also have a `return` keyword which, as it does in JavaScript, immediately terminates the function/method and sends back a value. In the case of the method above, `square?` will return the value of that last expression, `Math.sqrt(num).to_i**2 == num`.
+Ruby methods use an _implicit return_ - by default, they will return the value
+last expression evaluated (which may or may not be a return expression).
+However, Ruby does also have a `return` keyword which, as it does in
+JavaScript, immediately terminates the function/method and sends back a value.
+In the case of the method above, `square?` will return the value of that last
+expression, `Math.sqrt(num).to_i**2 == num`.
 
 #### Your Turn
 
-Take your code from the previous exercise and turn it into a method called `fizzbuzz`; this method should accept an argument, `max_num`.
+Take your code from the previous exercise and turn it into a method called
+`fizzbuzz`; this method should accept an argument, `max_num`.
 
 At the end of your program, add the following two lines:
 
@@ -335,14 +415,23 @@ binding.pry
 ""
 ```
 
-`binding.pry` inserts a breakpoint into the program; this will cause the program to stop and let us look around. The second line, with the empty string, is only necessary because `binding.pry` won't work if it's the last line in your program - it needs to stop _before_ something else.
+`binding.pry` inserts a breakpoint into the program; this will cause the
+program to stop and let us look around. The second line, with the empty
+string, is only necessary because `binding.pry` won't work if it's the last
+line in your program - it needs to stop *before* something else.
 
-Once you're finished writing your method, run the program with `ruby fizzbuzz.rb`; the console should take you to `pry`, allowing you to read from (and even write to) your program. Once there, try calling your `fizzbuzz` method with the following arguments : 10, 15, 30, 50. Does your code work like you'd expect?
+Once you're finished writing your method, run the program with
+`ruby fizzbuzz.rb`; the console should take you to `pry`, allowing you to
+read from (and even write to) your program. Once there, try calling your
+`fizzbuzz` method with the following arguments : 10, 15, 30, 50. Does your
+code work like you'd expect?
 
 ## Ruby vs JS :: Collections
 
 ### Arrays
-Arrays in Ruby are almost identical to arrays in JavaScript, down to the square braces.
+
+Arrays in Ruby are almost identical to arrays in JavaScript, down to the
+square braces.
 
 ```ruby
 [1] pry(main)> my_array = ["a","b","c"]
@@ -356,7 +445,9 @@ Arrays in Ruby are almost identical to arrays in JavaScript, down to the square 
 ```
 
 ### Hashes
-A Ruby hash acts somewhat like a dictionary in JavaScript, in that it consists of pairs of keys and values.
+
+A Ruby hash acts somewhat like a dictionary in JavaScript, in that it consists
+of pairs of keys and values.
 
 ```ruby
 [1] pry(main)> dict = {}
@@ -367,34 +458,51 @@ A Ruby hash acts somewhat like a dictionary in JavaScript, in that it consists o
 => 23
 ```
 
-However, there are a couple of important differences. For instance, Ruby hashes do not allow you to access their keys through a dot notation; you _must_ use square braces.
+However, there are a couple of important differences. For instance, Ruby
+hashes do not allow you to access their keys through a dot notation; you
+*must* use square braces.
 
 #### Your Turn
-In pairs, edit your fizzbuzz code, adding a hash containing keys `"fizz"`, `"buzz"`, `"fizzbuzz"`, and `"other"`, each with arrays as values. As you iterate through all the numbers from 1 to `max_num`, add each number to one of the arrays mentioned above; numbers divisible by 3 _only_ should go into the `"fizz"` array, numbers divisible by 5 _only_ should go into the ``"buzz"`` array, numbers divisible by both should go into the `"fizzbuzz"` array, and numbers divisible by neither should go into the `"other"` array. Finally, once you're done, return the hash as the result of `fizzbuzz`.
+
+In pairs, edit your fizzbuzz code, adding a hash containing keys `"fizz"`,
+`"buzz"`, `"fizzbuzz"`, and `"other"`, each with arrays as values. As you
+iterate through all the numbers from 1 to `max_num`, add each number to one
+of the arrays mentioned above; numbers divisible by 3 *only* should go into
+the `"fizz"` array, numbers divisible by 5 *only* should go into the ``"buzz"``
+ array, numbers divisible by both should go into the `"fizzbuzz"` array, and
+ numbers divisible by neither should go into the `"other"` array. Finally,
+ once you're done, return the hash as the result of `fizzbuzz`.
 
 Run your code from the console using `ruby`, and check your work using `pry`.
 
 ## Common Gotchas When Learning Ruby After JavaScript
 
-- `==` and `===` mean different things between the two languages. In JavaScript, `===` is a 'strict equality' comparator, while `==` is a 'loose equality' comparator; since `==` has some weird exceptions, the convention is to almost always use `===`. **In Ruby, however, the reverse is true; you should `==` to test for equality, and _not_ use `===`** (which does something different).
+-   `==` and `===` mean different things between the two languages. In
+JavaScript, `===` is a 'strict equality' comparator, while `==` is a
+'loose equality' comparator; since `==` has some weird exceptions, the
+convention is to almost always use `===`.
 
-- Use `.equal?` if we *need* to test for identity (two variables that reference the same object).
+**In Ruby, however, the reverse is true; you should `==` to test for equality, and _not_ use `===`** (which does something different).
 
-- Ruby has several different numeric types (unlike JavaScript), but most operations "do what we expect".
+-   Use `.equal?` if we *need* to test for identity (two variables that reference the same object).
 
-- Booleans: Only `false` and `nil` are falsy in Ruby.  Everything else is truthy.
+-   Ruby has several different numeric types (unlike JavaScript),
+but most operations "do what we expect".
 
-- We don't need to use parentheses when invoking a method (as we saw above with the `+` method - one exception later).  But sometimes they add clarity, so it can be beneficial to include them.
+-   Booleans: Only `false` and `nil` are falsy in Ruby.
+Everything else is truthy.
 
-- The Ruby comment character is `#`.  Everything following a `#` on a line is ignored by the interpreter.
+-   We don't need to use parentheses when invoking a method (as we saw above with the `+` method - one exception later).  But sometimes they add clarity, so it can be beneficial to include them.
 
-- p, [$stdout.]puts, [$stdout.]print are not directly analogous to console.log but are often used for a similar purpose when writing scripts run from the terminal
+-   The Ruby comment character is `#`.  Everything following a `#` on a line is ignored by the interpreter.
 
-- Ruby's convention is to use underscores between words in names (a.k.a. 'snake_case').  Constants start with a capital letter.
+-   p, [$stdout.]puts, [$stdout.]print are not directly analogous to console.log but are often used for a similar purpose when writing scripts run from the terminal
 
-- Use Sublime tab completion to avoid the common, and hard to find error of writing `def method_name` and forgetting the closing `end`. Good indentation will help with this as well.
+-   Ruby's convention is to use underscores between words in names (a.k.a. 'snake_case').  Constants start with a capital letter.
 
-- Ruby doesn't implicitly convert numbers to strings.
+-   Use Atom tab completion to avoid the common, and hard to find error of writing `def method_name` and forgetting the closing `end`. Good indentation will help with this as well.
+
+-   Ruby doesn't implicitly convert numbers to strings.
 
 ## Additional Resources
 
