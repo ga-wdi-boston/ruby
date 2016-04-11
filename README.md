@@ -370,6 +370,14 @@ The `do` keyword above is optional - a newline is sufficient - but `do ... end`
  **block**, a grouping of several lines of code. We'll learn more about
  blocks soon.
 
+ `for` loops are slightly different, but very intuitive.
+
+  ```ruby
+  for i in 1..10 do
+    puts i
+  end
+  ```
+
 #### Your Turn
 
 This time, rather than using `pry`, we're going to write a longer program in
