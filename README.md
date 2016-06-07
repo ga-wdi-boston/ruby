@@ -114,7 +114,7 @@ used *very* infrequently in Ruby.
 ### Variable Declaration
 
 Another huge difference between Ruby and JavaScript is how variables are
-handled. In JavaScript, a variable must be declared (using `var`) before it
+handled. In JavaScript, a variable must be declared (using `let`) before it
 can be used or accessed. In Ruby, **this is not the case**. Variables in Ruby
 can simply be defined, without having previously been declared.
 
@@ -185,7 +185,7 @@ variety of operators, including `*`, `-`, and even `||`.
 => 4
 ```
 
-#### Your Turn
+#### Lab: Pry
 
 In pairs, open up `pry` and take five minutes trying out the operators we've
 used in JavaScript on numbers and numeric variables. Does anything surprising
@@ -291,7 +291,7 @@ This also works:
 => "ten + seven == 17"
 ```
 
-#### Your Turn
+#### Lab: String Methods
 
 In your pairs, go to the Ruby documentation for strings (link above), and look
 up three of the methods available to Ruby strings. Open up `pry` and test them
@@ -426,7 +426,7 @@ JavaScript, immediately terminates the function/method and sends back a value.
 In the case of the method above, `square?` will return the value of that last
 expression, `Math.sqrt(num).to_i**2 == num`.
 
-#### Your Turn
+### Lab: Fizzbuzz
 
 Take your code from the previous exercise and turn it into a method called
 `fizzbuzz`; this method should accept an argument, `max_num`.
@@ -485,7 +485,7 @@ However, there are a couple of important differences. For instance, Ruby
 hashes do not allow you to access their keys through a dot notation; you
 *must* use square braces.
 
-#### Your Turn
+#### Lab: FizzBuzz with Hashes
 
 In pairs, edit your fizzbuzz code, adding a hash containing keys `"fizz"`,
 `"buzz"`, `"fizzbuzz"`, and `"other"`, each with arrays as values. As you
