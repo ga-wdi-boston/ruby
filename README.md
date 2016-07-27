@@ -244,8 +244,8 @@ if you forget a `+`, the expression won't work. And it gets even worse in Ruby,
  conversions need to be done manually using `.to_s`.
 
 ```ruby
-[1] pry(main)> name = "Matt"
-=> "Matt"
+[1] pry(main)> name = "Lauren"
+=> "Lauren"
 [2] pry(main)> age = 28
 => 28
 [3] pry(main)> puts age
@@ -255,7 +255,7 @@ if you forget a `+`, the expression won't work. And it gets even worse in Ruby,
 TypeError: no implicit conversion of Fixnum into String
 from (pry):3:in '+'
 [5] pry(main)> puts name + " is " + age.to_s + " years old"
-=> "Matt is 28 years old"
+=> "Lauren is 28 years old"
 ```
 
 Fortunately, Ruby does give us an alternative - at least with double-quoted
@@ -266,23 +266,23 @@ converted to a string.
 So instead of:
 
 ```ruby
-[1] pry(main)> name = "Matt"
-=> "Matt"
+[1] pry(main)> name = "Lauren"
+=> "Lauren"
 [2] pry(main)> age = 28
 => 35
 [3] pry(main)> name + " is " + age.to_s + " years old."
-=> "Matt is 28 years old."
+=> "Lauren is 28 years old."
 ```
 
 We can use:
 
 ```ruby
-[1] pry(main)> name = "Matt"
-=> "Matt"
+[1] pry(main)> name = "Lauren"
+=> "Lauren"
 [2] pry(main)> age = 28
 => 28
 [4] pry(main)> "#{name} is #{age} years old"
-=> "Matt is 28 years old"
+=> "Lauren is 28 years old"
 ```
 
 This also works:
@@ -306,23 +306,23 @@ we've explored.
 
 ```js
 // JavaScript version
-if (name === "Max") {
-  console.log("It's Max");
-} else if (name === "Matt") {
-  console.log("It's Matt");
+if (name === "Jason") {
+  console.log("It's Jason");
+} else if (name === "Lauren") {
+  console.log("It's Lauren");
 } else {
-  console.log("Not Max or Matt");
+  console.log("Not Jason or Lauren");
 }
 ```
 
 ```ruby
 # Ruby version
-if name == "Max"
-  puts "It's Max"
-elsif name == "Matt"
-  puts "It's Matt"
+if name == "Jason"
+  puts "It's Jason"
+elsif name == "Lauren"
+  puts "It's Lauren"
 else
-  puts "Not Max or Matt"
+  puts "Not Jason or Lauren"
 end
 ```
 
@@ -342,16 +342,16 @@ differences are:
 `elsif` or `else`.
 
 ```ruby
-if !(name == "Max")
-  puts "Not Max!"
+if !(name == "Jason")
+  puts "Not Jason!"
 end
 ```
 
 becomes
 
 ```ruby
-unless name == "Max"
-  puts "Not Max!"
+unless name == "Jason"
+  puts "Not Jason!"
 end
 ```
 
