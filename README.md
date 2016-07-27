@@ -371,13 +371,22 @@ The `do` keyword above is optional - a newline is sufficient - but `do ... end`
  **block**, a grouping of several lines of code. We'll learn more about
  blocks soon.
 
- `for` loops are slightly different, but very intuitive.
+`for` loops in Ruby exist, but are not commonly used. Instead, we use the
+[upto](http://ruby-doc.org/core-2.2.0/Integer.html#method-i-upto) enumerator.
 
-  ```ruby
-  for i in 1..10 do
-    puts i
-  end
-  ```
+```ruby
+1.upto(max) do |i|
+```
+
+### Code Along: `upto`
+
+In our `pry` consoles, let's enter:
+
+```ruby
+5.upto(10) { |i| print i, " " }
+```
+
+What do you expect to print? What does print?
 
 ### Lab: FizzBuzz
 
