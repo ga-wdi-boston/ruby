@@ -190,7 +190,8 @@ variety of operators, including `*`, `-`, and even `||`.
 In pairs, open up `pry` and take five minutes trying out the operators we've
 used in JavaScript on numbers and numeric variables. Does anything surprising
 or confusing happen? Write those things down to share with the class.  Have a
-look in `operator_examples.rb` if you need some prompts.
+look in [operator_examples.rb](bin/operator_examples.rb) if you need some
+prompts.
 
 ## Ruby vs JS :: Strings
 
@@ -205,7 +206,7 @@ then a letter or abbreviation hinting at what conversion they perform.
 `to_i` and `to_f` are used commonly - these convert the string into one of two
 types of numbers, *integers* (whole numbers) and *floats* (decimal numbers).
 
-### String interpolation
+### String Interpolation
 
 Ruby, unlike JavaScript, attributes different meanings to single-quoted and
 double-quoted strings. Single-quoted strings are referred to as
@@ -221,7 +222,7 @@ One neat thing that comes out of this is the ability to do
 string. In JavaScript, if we had a variable `name` with value '"Harry"' and
 wanted to print out `"Hello, Harry!"`, we would need to write
 
-```javascript
+```js
 console.log("Hello, " + name + "!");
 
   "Hello, Harry!"
@@ -230,7 +231,7 @@ console.log("Hello, " + name + "!");
 That's not too bad, but if you start doing this with multiple variables, it
 can get a little hairy.
 
-```JavaScript
+```js
 names = ["Harry", "Ron", "Hermione"]
 console.log("Hello, " + names[0] + ", " + names[1] + ", and " + names[2] + "!");
 
@@ -291,7 +292,7 @@ This also works:
 => "ten + seven == 17"
 ```
 
-#### Lab: String Methods
+### Lab: String Methods
 
 In your pairs, go to the Ruby documentation for strings (link above), and look
 up three of the methods available to Ruby strings. Open up `pry` and test them
@@ -303,7 +304,7 @@ we've explored.
 
 ### Conditionals
 
-```javascript
+```js
 // JavaScript version
 if (name === "Max") {
   console.log("It's Max");
@@ -378,11 +379,11 @@ The `do` keyword above is optional - a newline is sufficient - but `do ... end`
   end
   ```
 
-#### Your Turn
+### Lab: FizzBuzz
 
 This time, rather than using `pry`, we're going to write a longer program in
 Atom, and then run it in the terminal using `ruby`, a command line Ruby
-environment. Open up the file `fizzbuzz.rb`, found in the root of this repo;
+environment. Open up the file [fizzbuzz.rb](lib/fizzbuzz.rb);
 in pairs, you're going to solve "FizzBuzz", a simple programming challenge
 based on a childrens' game. Essentially, your program should print out all of
 the numbers from 1 up to `max_num`, which is a variable to which you can assign
@@ -392,7 +393,7 @@ the numbers from 1 up to `max_num`, which is a variable to which you can assign
  both 3 **and** five, it should print "fizzbuzz".
 
 To run your code, simply type navigate to the root of this repository and run
-`ruby fizzbuzz.rb`
+`ruby lib/fizzbuzz.rb`
 
 > This should seem familiar, since it's exactly what we were doing with `node`
 > in Unit 1. It's a deliberate similarity - Node was modeled off of other
@@ -426,7 +427,7 @@ JavaScript, immediately terminates the function/method and sends back a value.
 In the case of the method above, `square?` will return the value of that last
 expression, `Math.sqrt(num).to_i**2 == num`.
 
-### Lab: Fizzbuzz
+### Lab: Fizzbuzz Method
 
 Take your code from the previous exercise and turn it into a method called
 `fizzbuzz`; this method should accept an argument, `max_num`.
@@ -485,7 +486,7 @@ However, there are a couple of important differences. For instance, Ruby
 hashes do not allow you to access their keys through a dot notation; you
 *must* use square braces.
 
-#### Lab: FizzBuzz with Hashes
+### Lab: FizzBuzz with Hashes
 
 In pairs, edit your fizzbuzz code, adding a hash containing keys `"fizz"`,
 `"buzz"`, `"fizzbuzz"`, and `"other"`, each with arrays as values. As you
