@@ -383,7 +383,7 @@ The `do` keyword above is optional - a newline is sufficient - but `do ... end`
 In our `pry` consoles, let's enter:
 
 ```ruby
-5.upto(10) { |i| print i, " " }
+1.upto(10) do |i| puts i
 ```
 
 What do you expect to print? What does print?
@@ -445,7 +445,7 @@ At the end of your program, add the following two lines:
 
 ```ruby
 binding.pry
-""
+''
 ```
 
 `binding.pry` inserts a breakpoint into the program; this will cause the
