@@ -361,12 +361,12 @@ Similarly to `if`, a `while` loop also looks almost the same in Ruby as it does
  in JavaScript.
 
 ```ruby
-while i < 10 do
+while i < 10 do |i|
   i += 1
 end
 ```
 
-The `do` keyword above is optional - a newline is sufficient - but `do ... end`
+The `do ... end`
  is a common construction in Ruby because it specifies what's known as a
  **block**, a grouping of several lines of code. We'll learn more about
  blocks soon.
@@ -376,6 +376,8 @@ The `do` keyword above is optional - a newline is sufficient - but `do ... end`
 
 ```ruby
 1.upto(max) do |i|
+  # code to execute in loop
+end
 ```
 
 ### Code Along: `upto`
@@ -383,7 +385,9 @@ The `do` keyword above is optional - a newline is sufficient - but `do ... end`
 In our `pry` consoles, let's enter:
 
 ```ruby
-1.upto(10) do |i| puts i
+1.upto(10) do |i|
+  puts i
+end
 ```
 
 What do you expect to print? What does print?
