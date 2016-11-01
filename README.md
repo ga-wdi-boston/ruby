@@ -111,10 +111,11 @@ used *very* infrequently in Ruby.
 
 ### Variable Declaration
 
-Another huge difference between Ruby and JavaScript is how variables are
-handled. In JavaScript, a variable must be declared (using `let`) before it
-can be used or accessed. In Ruby, **this is not the case**. Variables in Ruby
-can simply be defined, without having previously been declared.
+Ruby handles variables differently than we've seen in previously. In Ruby,
+variables can be simply defined, **without previously being declared.** This
+means that with Ruby, we don't need keywords like `let` and `const` before variables.
+We can simply declare the variable and assign it a value `variable = value`
+
 
 ```ruby
 [1] pry(main)> a = 1
