@@ -44,8 +44,7 @@ By the end of this, students should be able to:
 
 ## Outline
 
-In order to accomplish our learning objectives, we've got quite a number of
-comparisons to make between Ruby and Javascript. These include:
+In order to accomplish our learning objectives, we've got quite a number of Ruby features to cover. These include:
 
 -   Running scripts from the command line.
 -   Evaluating code interactively in a REPL.
@@ -90,10 +89,9 @@ pry
 > code. Though we won't be focusing on that aspect of Pry today, it'll be a
 > critical tool throughout the rest of this unit.
 
-Let's use `pry` to explore some of the core differences between Ruby and
-JavaScript.
+Let's use `pry` to explore some of the fundamentals of the Ruby language.
 
-## Ruby vs JS :: Core Syntax, Variables, and Operators
+## Ruby :: Core Syntax, Variables, and Operators
 
 ### Semicolons
 
