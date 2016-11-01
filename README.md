@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Programming Fundamentals in Ruby (versus JavaScript)
+# Programming Fundamentals in Ruby
 
 You've alredy learned the basics of programming with JavaScript, and you've
 begun to think like a problem-solver. You've had practice reading JS code and
@@ -19,8 +19,7 @@ of basic programming concepts, as well as give you an edge in job market.
 You will reference this material again and again over the next few weeks. Focus
 on noting the differences between Ruby and JS. You should use this material as
 you would the [HyperPolyglot](http://hyperpolyglot.org/scripting) reference: not
-as reading material, but as a handy place to compare and contrast the two
-most popular languages for web development.
+as reading material, but as a handy place to define and experiment with the basics of Ruby.
 
 ## Prerequisites
 
