@@ -30,9 +30,10 @@ as reading material, but as a handy place to define and experiment with the basi
 
 By the end of this, students should be able to:
 
--   Contrast Ruby REPL and interpreter with Node interpreter/REPL.
+-   Use Ruby REPL and interpreter to run Ruby code.
 -   Contrast basic language features and types from Ruby with basic language
     features and types from JavaScript.
+-   Understand basic language features and types in Ruby.
 -   Rewrite a JavaScript script in Ruby.
 
 ## Preparation
