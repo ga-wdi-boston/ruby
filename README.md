@@ -192,7 +192,7 @@ or confusing happen? Write those things down to share with the class.  Have a
 look in [operator_examples.rb](bin/operator_examples.rb) if you need some
 prompts.
 
-## Ruby vs JS :: Strings
+## Ruby :: Strings
 
 Strings in Ruby are pretty similar to strings in JavaScript. To see all the
 methods that strings have in Ruby, open up `pry`, type a string followed by
@@ -299,7 +299,7 @@ out on some sample strings. Try to incorporate string interpolation at least
 once. Once you're done, we'll reconvene as a class and discuss the methods
 we've explored.
 
-## Ruby vs JS :: Flow Control
+## Ruby :: Flow Control
 
 ### Conditionals
 
@@ -412,7 +412,7 @@ To run your code, simply type navigate to the root of this repository and run
 > console-based runtime environments, as a way of giving JavaScript a solid
 > platform for running on the server side.
 
-## Ruby vs JS :: Methods
+## Ruby :: Methods
 
 Ruby draws no distinction between functions that are properties of objects and
 functions that aren't; in Ruby, all of them are called 'methods'.
@@ -462,7 +462,7 @@ read from (and even write to) your program. Once there, try calling your
 `fizzbuzz` method with the following arguments : 10, 15, 30, 50. Does your
 code work like you'd expect?
 
-## Ruby vs JS :: Collections
+## Ruby :: Collections
 
 ### Arrays
 
