@@ -35,6 +35,9 @@ By the end of this, students should be able to:
     features and types from JavaScript.
 -   Understand basic language features and types in Ruby.
 -   Rewrite a JavaScript script in Ruby.
+-   List and use common operators and types in Ruby.
+-   Identify operators in an expression and explain what it does.
+-   List all 6 Ruby object types and give an example of each.
 
 ## Preparation
 
