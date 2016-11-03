@@ -31,8 +31,6 @@ as reading material, but as a handy place to define and experiment with the basi
 By the end of this, students should be able to:
 
 -   Use Ruby REPL and interpreter to run Ruby code.
--   Contrast basic language features and types from Ruby with basic language
-    features and types from JavaScript.
 -   Understand basic language features and types in Ruby.
 -   Rewrite a JavaScript script in Ruby.
 -   List and use common operators in Ruby.
@@ -197,8 +195,7 @@ prompts.
 
 ## Ruby :: Strings
 
-Strings in Ruby are pretty similar to strings in JavaScript. To see all the
-methods that strings have in Ruby, open up `pry`, type a string followed by
+To see all the methods that strings have in Ruby, open up `pry`, type a string followed by
 a '.', and hit tab; alternatively, you can call `"some string".methods.sort`
 for a full list. And, of course, the Ruby documentation has
 [a full list](http://ruby-doc.org/core-2.2.0/String.html) as well.
@@ -210,7 +207,7 @@ types of numbers, *integers* (whole numbers) and *floats* (decimal numbers).
 
 ### String Interpolation
 
-Ruby, unlike JavaScript, attributes different meanings to single-quoted and
+Ruby attributes different meanings to single-quoted and
 double-quoted strings. Single-quoted strings are referred to as
 *'string literals'*; they interpret their contents as a literal sequence
 of characters, with only two recognized escape sequences - `\'` and `\\`.
@@ -221,29 +218,10 @@ character `\` followed by the character `\n`, rather than a new line.
 
 One neat thing that comes out of this is the ability to do
 *string interpolation*, inserting variables directly into the middle of a
-string. In JavaScript, if we had a variable `name` with value '"Harry"' and
-wanted to print out `"Hello, Harry!"`, we would need to write
+string.
 
-```js
-console.log("Hello, " + name + "!");
-
-  "Hello, Harry!"
-```
-
-That's not too bad, but if you start doing this with multiple variables, it
-can get a little hairy.
-
-```js
-names = ["Harry", "Ron", "Hermione"]
-console.log("Hello, " + names[0] + ", " + names[1] + ", and " + names[2] + "!");
-
-  "Hello, Harry, Ron, and Hermione!"
-```
-
-Keeping track of all of those quotes is a pain (not to mention the spaces), and
-if you forget a `+`, the expression won't work. And it gets even worse in Ruby,
- because Ruby doesn't implicitly convert numbers to strings, so all those
- conversions need to be done manually using `.to_s`.
+In Ruby,because Ruby doesn't implicitly convert numbers to strings, so all those
+string conversions need to be done manually using `.to_s`.
 
 ```ruby
 [1] pry(main)> name = "Lauren"
@@ -306,17 +284,6 @@ we've explored.
 
 ### Conditionals
 
-```js
-// JavaScript version
-if (name === "Jason") {
-  console.log("It's Jason");
-} else if (name === "Lauren") {
-  console.log("It's Lauren");
-} else {
-  console.log("Not Jason or Lauren");
-}
-```
-
 ```ruby
 # Ruby version
 if name == "Jason"
@@ -375,12 +342,14 @@ The `do ... end`
 
 `for` loops in Ruby exist, but are not commonly used. Instead, we use the
 [upto](http://ruby-doc.org/core-2.2.0/Integer.html#method-i-upto) enumerator.
+We'll learn more about enumerators soon.
 
 ```ruby
 1.upto(max) do |i|
   # code to execute in loop
 end
 ```
+
 
 ### Code Along: `upto`
 
@@ -556,7 +525,6 @@ will help with this as well.
 ## Additional Resources
 
 -   **[Links to a variety of offical language and api documentation](https://www.ruby-lang.org/en/documentation/)**
--   **[rubymonk](https://rubymonk.com/)**
 -   **[why's (poignant) Guide to Ruby](http://mislav.uniqpath.com/poignant-guide/)**
 
 ## [License](LICENSE)
