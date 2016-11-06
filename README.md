@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Programming Fundamentals in Ruby (versus JavaScript)
+# Programming Fundamentals in Ruby
 
 You've alredy learned the basics of programming with JavaScript, and you've
 begun to think like a problem-solver. You've had practice reading JS code and
@@ -19,8 +19,7 @@ of basic programming concepts, as well as give you an edge in job market.
 You will reference this material again and again over the next few weeks. Focus
 on noting the differences between Ruby and JS. You should use this material as
 you would the [HyperPolyglot](http://hyperpolyglot.org/scripting) reference: not
-as reading material, but as a handy place to compare and contrast the two
-most popular languages for web development.
+as reading material, but as a handy place to define and experiment with the basics of Ruby.
 
 ## Prerequisites
 
@@ -31,10 +30,12 @@ most popular languages for web development.
 
 By the end of this, students should be able to:
 
--   Contrast Ruby REPL and interpreter with Node interpreter/REPL.
--   Contrast basic language features and types from Ruby with basic language
-    features and types from JavaScript.
--   Rewrite a JavaScript script in Ruby.
+-   Use Ruby REPL and interpreter to run Ruby code.
+-   Understand basic language features and types in Ruby.
+-   Write a fizzbuzz script in Ruby.
+-   List and use common operators in Ruby.
+-   Identify operators in an expression and explain what it does.
+-   List all 6 Ruby object types and give an example of each.
 
 ## Preparation
 
@@ -44,8 +45,7 @@ By the end of this, students should be able to:
 
 ## Outline
 
-In order to accomplish our learning objectives, we've got quite a number of
-comparisons to make between Ruby and Javascript. These include:
+In order to accomplish our learning objectives, we've got quite a number of Ruby features to cover. These include:
 
 -   Running scripts from the command line.
 -   Evaluating code interactively in a REPL.
@@ -90,10 +90,9 @@ pry
 > code. Though we won't be focusing on that aspect of Pry today, it'll be a
 > critical tool throughout the rest of this unit.
 
-Let's use `pry` to explore some of the core differences between Ruby and
-JavaScript.
+Let's use `pry` to explore some of the fundamentals of the Ruby language.
 
-## Ruby vs JS :: Core Syntax, Variables, and Operators
+## Ruby :: Core Syntax, Variables, and Operators
 
 ### Semicolons
 
@@ -113,10 +112,11 @@ used *very* infrequently in Ruby.
 
 ### Variable Declaration
 
-Another huge difference between Ruby and JavaScript is how variables are
-handled. In JavaScript, a variable must be declared (using `let`) before it
-can be used or accessed. In Ruby, **this is not the case**. Variables in Ruby
-can simply be defined, without having previously been declared.
+Ruby handles variables differently than we've seen in previously. In Ruby,
+variables can be simply defined, **without previously being declared.** This
+means that with Ruby, we don't need keywords like `let` and `const` before variables.
+We can simply declare the variable and assign it a value `variable = value`
+
 
 ```ruby
 [1] pry(main)> a = 1
@@ -193,10 +193,9 @@ or confusing happen? Write those things down to share with the class.  Have a
 look in [operator_examples.rb](bin/operator_examples.rb) if you need some
 prompts.
 
-## Ruby vs JS :: Strings
+## Ruby :: Strings
 
-Strings in Ruby are pretty similar to strings in JavaScript. To see all the
-methods that strings have in Ruby, open up `pry`, type a string followed by
+To see all the methods that strings have in Ruby, open up `pry`, type a string followed by
 a '.', and hit tab; alternatively, you can call `"some string".methods.sort`
 for a full list. And, of course, the Ruby documentation has
 [a full list](http://ruby-doc.org/core-2.2.0/String.html) as well.
@@ -208,7 +207,7 @@ types of numbers, *integers* (whole numbers) and *floats* (decimal numbers).
 
 ### String Interpolation
 
-Ruby, unlike JavaScript, attributes different meanings to single-quoted and
+Ruby attributes different meanings to single-quoted and
 double-quoted strings. Single-quoted strings are referred to as
 *'string literals'*; they interpret their contents as a literal sequence
 of characters, with only two recognized escape sequences - `\'` and `\\`.
@@ -219,29 +218,10 @@ character `\` followed by the character `\n`, rather than a new line.
 
 One neat thing that comes out of this is the ability to do
 *string interpolation*, inserting variables directly into the middle of a
-string. In JavaScript, if we had a variable `name` with value '"Harry"' and
-wanted to print out `"Hello, Harry!"`, we would need to write
+string.
 
-```js
-console.log("Hello, " + name + "!");
-
-  "Hello, Harry!"
-```
-
-That's not too bad, but if you start doing this with multiple variables, it
-can get a little hairy.
-
-```js
-names = ["Harry", "Ron", "Hermione"]
-console.log("Hello, " + names[0] + ", " + names[1] + ", and " + names[2] + "!");
-
-  "Hello, Harry, Ron, and Hermione!"
-```
-
-Keeping track of all of those quotes is a pain (not to mention the spaces), and
-if you forget a `+`, the expression won't work. And it gets even worse in Ruby,
- because Ruby doesn't implicitly convert numbers to strings, so all those
- conversions need to be done manually using `.to_s`.
+In Ruby,because Ruby doesn't implicitly convert numbers to strings, so all those
+string conversions need to be done manually using `.to_s`.
 
 ```ruby
 [1] pry(main)> name = "Lauren"
@@ -300,20 +280,9 @@ out on some sample strings. Try to incorporate string interpolation at least
 once. Once you're done, we'll reconvene as a class and discuss the methods
 we've explored.
 
-## Ruby vs JS :: Flow Control
+## Ruby :: Flow Control
 
 ### Conditionals
-
-```js
-// JavaScript version
-if (name === "Jason") {
-  console.log("It's Jason");
-} else if (name === "Lauren") {
-  console.log("It's Lauren");
-} else {
-  console.log("Not Jason or Lauren");
-}
-```
 
 ```ruby
 # Ruby version
@@ -373,12 +342,14 @@ The `do ... end`
 
 `for` loops in Ruby exist, but are not commonly used. Instead, we use the
 [upto](http://ruby-doc.org/core-2.2.0/Integer.html#method-i-upto) enumerator.
+We'll learn more about enumerators soon.
 
 ```ruby
 1.upto(max) do |i|
   # code to execute in loop
 end
 ```
+
 
 ### Code Along: `upto`
 
@@ -413,7 +384,7 @@ To run your code, simply type navigate to the root of this repository and run
 > console-based runtime environments, as a way of giving JavaScript a solid
 > platform for running on the server side.
 
-## Ruby vs JS :: Methods
+## Ruby :: Methods
 
 Ruby draws no distinction between functions that are properties of objects and
 functions that aren't; in Ruby, all of them are called 'methods'.
@@ -463,7 +434,7 @@ read from (and even write to) your program. Once there, try calling your
 `fizzbuzz` method with the following arguments : 10, 15, 30, 50. Does your
 code work like you'd expect?
 
-## Ruby vs JS :: Collections
+## Ruby :: Collections
 
 ### Arrays
 
@@ -554,7 +525,6 @@ will help with this as well.
 ## Additional Resources
 
 -   **[Links to a variety of offical language and api documentation](https://www.ruby-lang.org/en/documentation/)**
--   **[rubymonk](https://rubymonk.com/)**
 -   **[why's (poignant) Guide to Ruby](http://mislav.uniqpath.com/poignant-guide/)**
 
 ## [License](LICENSE)

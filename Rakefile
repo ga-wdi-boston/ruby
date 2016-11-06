@@ -1,9 +1,13 @@
 # Tasks for ruby-template
+# frozen_string_literal: true
 
-begin
-  require 'rspec/core/rake_task'
-  RSpec::Core::RakeTask.new(:test)
-  # rubocop:disable Lint/HandleExceptions
-rescue LoadError
-  # rubocop:enable Lint/HandleExceptions
-end
+Dir.glob('lib/tasks/*.rake').each { |rake| load rake }
+
+desc 'Improve style'
+task nag: :rubocop
+
+desc 'Check code'
+task test: :spec
+
+desc 'lint and run tests'
+task default: [:nag, :test]

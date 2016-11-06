@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
 require_relative '../lib/example.rb'
+
 RSpec.describe Example do
   context 'initialized without arguments' do
     example = Example.new

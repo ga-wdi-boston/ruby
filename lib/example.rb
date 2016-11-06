@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # An example class
 class Example
   attr_accessor :value
