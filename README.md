@@ -330,6 +330,7 @@ Similarly to `if`, a `while` loop also looks almost the same in Ruby as it does
  in JavaScript.
 
 ```ruby
+i = 0
 while i < 10 do |i|
   i += 1
 end
