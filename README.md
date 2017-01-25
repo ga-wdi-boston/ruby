@@ -2,7 +2,7 @@
 
 # Programming Fundamentals in Ruby
 
-You've alredy learned the basics of programming with JavaScript, and you've
+You've already learned the basics of programming with JavaScript, and you've
 begun to think like a problem-solver. You've had practice reading JS code and
 predicting execution by evaluating expressions in your mind.
 
@@ -14,7 +14,7 @@ goal of utilizing the foundation we've already built.
 
 "Polyglot" is a term used to refer to someone who can use two or more
 programming languages. By learning two languages, we increase your understanding
-of basic programming concepts, as well as give you an edge in job market.
+of basic programming concepts, as well as give you an edge in job the market.
 
 You will reference this material again and again over the next few weeks. Focus
 on noting the differences between Ruby and JS. You should use this material as
