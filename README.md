@@ -28,7 +28,7 @@ as reading material, but as a handy place to define and experiment with the basi
 
 ## Objectives
 
-By the end of this, students should be able to:
+By the end of this, developers should be able to:
 
 -   Use Ruby REPL and interpreter to run Ruby code.
 -   Understand basic language features and types in Ruby.
