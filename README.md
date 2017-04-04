@@ -108,7 +108,7 @@ semicolons.
 
 The end of a line (almost always) marks the end of an expression; semicolons
 are only required if you have two distinct expressions on one line
-(e.g. `name = "Antony"; age = 35`). The most likely place where you might spot
+(e.g. `name = "Antony"; height_in_feet = 6`). The most likely place where you might spot
 a semicolon in Ruby is inside a `for` loop, and those (as you'll soon see) are
 used *very* infrequently in Ruby.
 
@@ -228,16 +228,16 @@ string conversions need to be done manually using `.to_s`.
 ```ruby
 [1] pry(main)> name = "Lauren"
 => "Lauren"
-[2] pry(main)> age = 28
-=> 28
-[3] pry(main)> puts age
-28
+[2] pry(main)> height_in_feet = 5
+=> 5
+[3] pry(main)> puts height_in_feet
+5
 => nil
-[4] pry(main)> puts name + " is " + age + " years old"
+[4] pry(main)> puts name + " is " + height_in_feet + " feet tall."
 TypeError: no implicit conversion of Fixnum into String
 from (pry):3:in '+'
-[5] pry(main)> puts name + " is " + age.to_s + " years old"
-=> "Lauren is 28 years old"
+[5] pry(main)> puts name + " is " + height_in_feet.to_s + " feet tall."
+=> "Lauren is 5 feet tall."
 ```
 
 Fortunately, Ruby does give us an alternative - at least with double-quoted
@@ -250,10 +250,10 @@ So instead of:
 ```ruby
 [1] pry(main)> name = "Lauren"
 => "Lauren"
-[2] pry(main)> age = 28
-=> 35
-[3] pry(main)> name + " is " + age.to_s + " years old."
-=> "Lauren is 28 years old."
+[2] pry(main)> height_in_feet = 5
+=> 5
+[3] pry(main)> name + " is " + height_in_feet.to_s + " feet tall."
+=> "Lauren is 5 feet tall."
 ```
 
 We can use:
@@ -261,10 +261,10 @@ We can use:
 ```ruby
 [1] pry(main)> name = "Lauren"
 => "Lauren"
-[2] pry(main)> age = 28
-=> 28
-[4] pry(main)> "#{name} is #{age} years old"
-=> "Lauren is 28 years old"
+[2] pry(main)> height_in_feet = 5
+=> 5
+[4] pry(main)> "#{name} is #{height_in_feet} feet tall."
+=> "Lauren is 5 feet tall."
 ```
 
 This also works:
