@@ -7,4 +7,4 @@ desc 'Check code'
 task test: :spec
 
 desc 'lint and run tests'
-task default: [:nag, :test]
+task default: %i[nag test]

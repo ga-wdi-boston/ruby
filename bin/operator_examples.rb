@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def add_numbers(a, b)
   a + b
 end
