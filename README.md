@@ -30,8 +30,8 @@ as reading material, but as a handy place to define and experiment with the basi
 
 By the end of this, developers should be able to:
 
--   Use Ruby REPL and interpreter to run Ruby code.
--   Understand basic language features and types in Ruby.
+-   Run Ruby code using Ruby REPL and interpreter.
+-   Identify basic language features and types in Ruby.
 -   Write a fizzbuzz script in Ruby.
 -   List and use common operators in Ruby.
 -   Identify operators in an expression and explain what it does.
