@@ -98,8 +98,7 @@ Let's use `pry` to explore some of the fundamentals of the Ruby language.
 
 ### Semicolons
 
-One of the first things you might notice about Ruby is a conspicuous lack of
-semicolons.
+We have been writing JavaScript without semicolons; however, when searching the internet for help, you most likely have encountered semicolons in solutions. In Ruby, there is a conspicuous lack of semicolons.
 
 ```ruby
 [1] pry(main)> 1
@@ -222,7 +221,7 @@ One neat thing that comes out of this is the ability to do
 *string interpolation*, inserting variables directly into the middle of a
 string.
 
-In Ruby,because Ruby doesn't implicitly convert numbers to strings, so all those
+In Ruby, because Ruby doesn't implicitly convert numbers to strings, so all those
 string conversions need to be done manually using `.to_s`.
 
 ```ruby
@@ -302,12 +301,8 @@ differences are:
 
 -   In Ruby, we use `elsif`, not `else if`.
 -   Conditions don't require parentheses (though they can still accept them).
--   No curly braces required. Simply break up your condition from your code
--   with a newline (as above), a semicolon, or the keyword `then`
--   (e.g. `if .... then `).
--   The end of the `if` is indicated by the keyword `end`. `end` is an extremely
--   common keyword in Ruby, appearing at the end of pretty much any contiguous
--   section of code.
+-   No curly braces required. Simply break up your condition from your code with a newline (as above), a semicolon, or the keyword `then` (e.g. `if .... then `).
+-   The end of the `if` is indicated by the keyword `end`. `end` is an extremely common keyword in Ruby, appearing at the end of pretty much any contiguous section of code.
 
 `unless` can sometimes be used to replace an `if` with a negated test and no
 `elsif` or `else`.
@@ -406,7 +401,7 @@ common convention in Ruby is a trailing exclamation point, which indicates that
 
 > This behavior is also sometimes referred to as operating 'in place'.
 
-Ruby methods use an *implicit return* - by default, they will return the value
+Ruby methods use an *implicit return* - by default, they will return the value of the
 last expression evaluated (which may or may not be a return expression).
 However, Ruby does also have a `return` keyword which, as it does in
 JavaScript, immediately terminates the function/method and sends back a value.
@@ -456,7 +451,7 @@ square braces.
 
 ### Hashes
 
-A Ruby hash acts somewhat like a dictionary in JavaScript, in that it consists
+A Ruby hash acts somewhat like a dictionary (or object) in JavaScript, in that it consists
 of pairs of keys and values.
 
 ```ruby
@@ -513,7 +508,7 @@ is ignored by the interpreter.
 
 -   p, [$stdout.]puts, [$stdout.]print are not directly analogous to
 console.log but are often used for a similar purpose when writing scripts
-run from the terminal
+run from the terminal.
 
 -   Ruby's convention is to use underscores between words in names (a.k.a.
 'snake_case').  Constants start with a capital letter.
