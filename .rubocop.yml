@@ -1,3 +1,9 @@
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
 AllCops:
+  TargetRubyVersion:
+    2.3
   Exclude:
     - 'spec/spec_helper.rb'

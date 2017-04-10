@@ -2,7 +2,7 @@
 
 # Programming Fundamentals in Ruby
 
-You've alredy learned the basics of programming with JavaScript, and you've
+You've already learned the basics of programming with JavaScript, and you've
 begun to think like a problem-solver. You've had practice reading JS code and
 predicting execution by evaluating expressions in your mind.
 
@@ -14,7 +14,7 @@ goal of utilizing the foundation we've already built.
 
 "Polyglot" is a term used to refer to someone who can use two or more
 programming languages. By learning two languages, we increase your understanding
-of basic programming concepts, as well as give you an edge in job market.
+of basic programming concepts, as well as give you an edge in job the market.
 
 You will reference this material again and again over the next few weeks. Focus
 on noting the differences between Ruby and JS. You should use this material as
@@ -28,10 +28,10 @@ as reading material, but as a handy place to define and experiment with the basi
 
 ## Objectives
 
-By the end of this, students should be able to:
+By the end of this, developers should be able to:
 
--   Use Ruby REPL and interpreter to run Ruby code.
--   Understand basic language features and types in Ruby.
+-   Run Ruby code using Ruby REPL and interpreter.
+-   Identify basic language features and types in Ruby.
 -   Write a fizzbuzz script in Ruby.
 -   List and use common operators in Ruby.
 -   Identify operators in an expression and explain what it does.
@@ -39,8 +39,10 @@ By the end of this, students should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
+1.  Fork and clone this repository.
+ [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  Create a new branch, `training`, for your work.
+1.  Checkout to the `training` branch.
 1.  Install dependencies with `bundle install`.
 
 ## Outline
@@ -96,8 +98,7 @@ Let's use `pry` to explore some of the fundamentals of the Ruby language.
 
 ### Semicolons
 
-One of the first things you might notice about Ruby is a conspicuous lack of
-semicolons.
+We have been writing JavaScript without semicolons; however, when searching the internet for help, you most likely have encountered semicolons in solutions. In Ruby, there is a conspicuous lack of semicolons.
 
 ```ruby
 [1] pry(main)> 1
@@ -106,7 +107,7 @@ semicolons.
 
 The end of a line (almost always) marks the end of an expression; semicolons
 are only required if you have two distinct expressions on one line
-(e.g. `name = "Antony"; age = 35`). The most likely place where you might spot
+(e.g. `name = "Antony"; height_in_feet = 6`). The most likely place where you might spot
 a semicolon in Ruby is inside a `for` loop, and those (as you'll soon see) are
 used *very* infrequently in Ruby.
 
@@ -115,7 +116,7 @@ used *very* infrequently in Ruby.
 Ruby handles variables differently than we've seen in previously. In Ruby,
 variables can be simply defined, **without previously being declared.** This
 means that with Ruby, we don't need keywords like `let` and `const` before variables.
-We can simply declare the variable and assign it a value `variable = value`
+We can simply declare the variable and assign it a value `variable = value`.
 
 
 ```ruby
@@ -198,7 +199,7 @@ prompts.
 To see all the methods that strings have in Ruby, open up `pry`, type a string followed by
 a '.', and hit tab; alternatively, you can call `"some string".methods.sort`
 for a full list. And, of course, the Ruby documentation has
-[a full list](http://ruby-doc.org/core-2.2.0/String.html) as well.
+[a full list](https://ruby-doc.org/core-2.3.0/String.html) as well.
 
 Strings objects come with several conversion methods that all start `to_` and
 then a letter or abbreviation hinting at what conversion they perform.
@@ -220,22 +221,22 @@ One neat thing that comes out of this is the ability to do
 *string interpolation*, inserting variables directly into the middle of a
 string.
 
-In Ruby,because Ruby doesn't implicitly convert numbers to strings, so all those
+In Ruby, because Ruby doesn't implicitly convert numbers to strings, so all those
 string conversions need to be done manually using `.to_s`.
 
 ```ruby
 [1] pry(main)> name = "Lauren"
 => "Lauren"
-[2] pry(main)> age = 28
-=> 28
-[3] pry(main)> puts age
-28
+[2] pry(main)> height_in_feet = 5
+=> 5
+[3] pry(main)> puts height_in_feet
+5
 => nil
-[4] pry(main)> puts name + " is " + age + " years old"
+[4] pry(main)> puts name + " is " + height_in_feet + " feet tall."
 TypeError: no implicit conversion of Fixnum into String
 from (pry):3:in '+'
-[5] pry(main)> puts name + " is " + age.to_s + " years old"
-=> "Lauren is 28 years old"
+[5] pry(main)> puts name + " is " + height_in_feet.to_s + " feet tall."
+=> "Lauren is 5 feet tall."
 ```
 
 Fortunately, Ruby does give us an alternative - at least with double-quoted
@@ -248,10 +249,10 @@ So instead of:
 ```ruby
 [1] pry(main)> name = "Lauren"
 => "Lauren"
-[2] pry(main)> age = 28
-=> 35
-[3] pry(main)> name + " is " + age.to_s + " years old."
-=> "Lauren is 28 years old."
+[2] pry(main)> height_in_feet = 5
+=> 5
+[3] pry(main)> name + " is " + height_in_feet.to_s + " feet tall."
+=> "Lauren is 5 feet tall."
 ```
 
 We can use:
@@ -259,10 +260,10 @@ We can use:
 ```ruby
 [1] pry(main)> name = "Lauren"
 => "Lauren"
-[2] pry(main)> age = 28
-=> 28
-[4] pry(main)> "#{name} is #{age} years old"
-=> "Lauren is 28 years old"
+[2] pry(main)> height_in_feet = 5
+=> 5
+[4] pry(main)> "#{name} is #{height_in_feet} feet tall."
+=> "Lauren is 5 feet tall."
 ```
 
 This also works:
@@ -300,12 +301,8 @@ differences are:
 
 -   In Ruby, we use `elsif`, not `else if`.
 -   Conditions don't require parentheses (though they can still accept them).
--   No curly braces required. Simply break up your condition from your code
--   with a newline (as above), a semicolon, or the keyword `then`
--   (e.g. `if .... then `).
--   The end of the `if` is indicated by the keyword `end`. `end` is an extremely
--   common keyword in Ruby, appearing at the end of pretty much any contiguous
--   section of code.
+-   No curly braces required. Simply break up your condition from your code with a newline (as above), a semicolon, or the keyword `then` (e.g. `if .... then `).
+-   The end of the `if` is indicated by the keyword `end`. `end` is an extremely common keyword in Ruby, appearing at the end of pretty much any contiguous section of code.
 
 `unless` can sometimes be used to replace an `if` with a negated test and no
 `elsif` or `else`.
@@ -341,7 +338,7 @@ The `do ... end`
  blocks soon.
 
 `for` loops in Ruby exist, but are not commonly used. Instead, we use the
-[upto](http://ruby-doc.org/core-2.2.0/Integer.html#method-i-upto) enumerator.
+[upto](http://ruby-doc.org/core-2.3.0/Integer.html#method-i-upto) enumerator.
 We'll learn more about enumerators soon.
 
 ```ruby
@@ -404,7 +401,7 @@ common convention in Ruby is a trailing exclamation point, which indicates that
 
 > This behavior is also sometimes referred to as operating 'in place'.
 
-Ruby methods use an *implicit return* - by default, they will return the value
+Ruby methods use an *implicit return* - by default, they will return the value of the
 last expression evaluated (which may or may not be a return expression).
 However, Ruby does also have a `return` keyword which, as it does in
 JavaScript, immediately terminates the function/method and sends back a value.
@@ -454,7 +451,7 @@ square braces.
 
 ### Hashes
 
-A Ruby hash acts somewhat like a dictionary in JavaScript, in that it consists
+A Ruby hash acts somewhat like a dictionary (or object) in JavaScript, in that it consists
 of pairs of keys and values.
 
 ```ruby
@@ -511,7 +508,7 @@ is ignored by the interpreter.
 
 -   p, [$stdout.]puts, [$stdout.]print are not directly analogous to
 console.log but are often used for a similar purpose when writing scripts
-run from the terminal
+run from the terminal.
 
 -   Ruby's convention is to use underscores between words in names (a.k.a.
 'snake_case').  Constants start with a capital letter.

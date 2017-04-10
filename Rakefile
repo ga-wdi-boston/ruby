@@ -1,13 +1,8 @@
 # Tasks for ruby-template
 # frozen_string_literal: true
 
-Dir.glob('lib/tasks/*.rake').each { |rake| load rake }
+Dir.glob('lib/tasks/*.rake').each do |rake|
+  load rake unless rake.include? 'aliases'
+end
 
-desc 'Improve style'
-task nag: :rubocop
-
-desc 'Check code'
-task test: :spec
-
-desc 'lint and run tests'
-task default: [:nag, :test]
+load 'lib/tasks/aliases.rake' if File.exist? 'lib/tasks/aliases.rake'
